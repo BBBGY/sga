@@ -131,7 +131,7 @@ async def generate_cover(thumbnail, title, userid, ctitle):
 
 
     
-@Client.on_message(command(["تشغيل", f"شغل"]) & other_filters)
+@Client.on_message(command(["تشغيل", f"شغل ش"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
@@ -143,7 +143,7 @@ async def play(c: Client, m: Message):
                       InlineKeyboardButton("⏭️", "skip"),
                       InlineKeyboardButton("🔼", callback_data="cbresume"),
                   ],[
-                      InlineKeyboardButton(text="🥇 المطور ", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                      InlineKeyboardButton(text="🥇قناه المطور ", url=f"https://t.me/{UPDATES_CHANNEL}"),
                   ],[
                       InlineKeyboardButton("مسح.", callback_data="cls")],
                   ]
@@ -313,7 +313,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=image,
-                                caption=f"❤️‍🔥 **→ الاسم :** [{songname[:22]}]({url})\n**❤️‍🔥 → المدة:** `{duration}`\n❤️‍🔥 →** طلب من الگي:** {requester}",
+                                caption=f"❤️‍🔥 **→ الاسم :** [{songname[:22]}]({url})\n**❤️‍🔥 → المدة:** `{duration}`\n❤️‍🔥 →** طلب من الزباله:** {requester}",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
